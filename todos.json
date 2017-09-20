@@ -1,0 +1,66 @@
+{
+    "todoList": [
+        {
+            "title": "DSTCMHIII-5789 Area Split Up",
+            "id": "0a6afa11-d271-434d-99b6-06755b452b33",
+            "status": "todo",
+            "createdOn": 1504820911397,
+            "completedOn": null
+        },
+        {
+            "title": "DSTCMHIII-5784 Single Card Summary Defect",
+            "id": "5665c1ef-b4fd-48e4-84b4-ccc49ac6948b",
+            "status": "todo",
+            "createdOn": 1504821006936,
+            "completedOn": null
+        },
+        {
+            "title": "DSTCMHIII-5818 Last login message",
+            "id": "b618ccc5-43df-42be-8edf-f04015bb7589",
+            "status": "todo",
+            "createdOn": 1504900466059,
+            "completedOn": null
+        }
+    ],
+    "completedList": [
+        {
+            "id": "65142ba9-a4bc-4c93-a3f5-8a95156c754c",
+            "title": "Completed task",
+            "createdOn": 1504822603484,
+            "completedOn": 1504822611908,
+            "status": "completed"
+        }
+    ],
+    "archivedList": [
+        {
+            "id": "1baf8fa2-a6f9-4baa-99bb-8dd79080e9a1",
+            "title": "Archived task",
+            "createdOn": 1504822615546,
+            "completedOn": 1504822624707,
+            "status": "archived"
+        }
+    ],
+    "backLogList": [
+        {
+            "id": "210070f0-da7f-4170-bf8b-041245e63d37",
+            "title": "Blue Workflow",
+            "createdOn": 1504820878737,
+            "completedOn": null,
+            "status": "backlog"
+        },
+        {
+            "id": "d77aa3bf-9de1-44d7-9027-4d97ee54c172",
+            "title": "This: responsive design",
+            "createdOn": 1504823037469,
+            "completedOn": null,
+            "status": "backlog"
+        },
+        {
+            "title": "This: server + db",
+            "id": "31747e0d-c81b-4cf3-a2ec-1a78c5a142c5",
+            "status": "backlog",
+            "createdOn": 1504823055530,
+            "completedOn": null
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+#clock{
+    position: absolute;
+    right: 1em;
+}
+
+#header {
+  margin: 1em;
+}
+
+#content {
+  margin: 3em 1em;
+}
+
+.listSegment{
+    width: 50% !important;
+}
+
+.task {
+  padding-right: 60px !important;
+}
+
+.title {
+  margin-bottom: 2px;
+}
+
+.task.completed .title{
+  text-decoration: line-through;
+}
+
+.task.archived .title {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.task-actions {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+.task-content {
+  margin-bottom: 0px !important;
+}
+
+.addButton {
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+}
+
+.ui.segment.column {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.toggleAdditional {
+    min-width: 150px;
+}
+
+.toggleAdditional .icon {
+    float: right;
+}
+
+.toggleAdditional.open .seeMore,
+.toggleAdditional.closed .seeLess{
+    display: none;
+}
+
+.additional {
+    transform-origin: top;
+    transition: transform 0.2s;
+}
+
+.additional.open {
+    transform: scaleY(1);
+}
+
+.additional.closed {
+    transform: scaleY(0);
+    height: 0;
+}
