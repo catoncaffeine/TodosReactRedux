@@ -487,21 +487,15 @@ class TaskForm extends React.Component {
         errors: {}
     };
 
-    handleInputFocus = (e) => {
-        e.target.value = this.state.fields.title || "";
-    };
-
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.handleChangeTaskTitle(this.state.fields.title);
     };
 
-    handleInputChange = (e) => {
-        this.setState({
-            fields: {
-                title: e.target.value
-            }
-        });
+    updateFormFields = (name, value) => {
+        const fields = this.state.fields;
+        fields[name] = value;
+        this.setState(fields);
     };
 
     render() {
@@ -509,17 +503,40 @@ class TaskForm extends React.Component {
             <form className="ui input fluid large focus"
                   onSubmit={this.handleSubmit}
             >
-                <input
+                <TaskFormField
                     name="title"
                     placeholder="Add Todo Description..."
                     autoFocus={true}
-                    onFocus={this.handleInputFocus}
-                    onChange={this.handleInputChange}
-                    onBlur={this.handleSubmit}
+                    updateFormFields={this.updateFormFields}
+                    handleInputBlur={this.handleSubmit}
+                    value={this.state.fields.title}
                 />
             </form>
         );
     }
+}
+
+class TaskFormField extends React.Component {
+    handleInputFocus = (e) => {
+        e.target.value = this.props.value || "";
+    };
+
+    handleInputChange = (e) => {
+        this.props.updateFormFields(this.props.name, e.target.value);
+    };
+
+    render() {
+        return(
+            <input
+                name={this.props.name}
+                placeholder={this.props.placeholder}
+                autoFocus={this.props.autoFocus}
+                onFocus={this.handleInputFocus}
+                onChange={this.handleInputChange}
+                onBlur={this.props.handleInputBlur}
+            />
+        );
+    };
 }
 
 class TaskAction extends React.Component {
