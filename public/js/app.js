@@ -435,26 +435,17 @@ class EditableTask extends React.Component {
         this.props.editTask(this.props.id, this.props.status);
     };
 
-    handleChangeTaskTitle = (e) => {
-        this.props.changeTaskTitle(this.props.id, e.target.value, this.props.status);
-    };
-
-    handleInputFocus = (e) => {
-        let value = this.props.title || "";
-        e.target.value = value;
+    handleChangeTaskTitle = (newTitle) => {
+        this.props.changeTaskTitle(this.props.id, newTitle, this.props.status);
     };
 
     render() {
         if(this.props.editing) {
             return (
-                <div className="ui input fluid large focus">
-                    <input
-                        placeholder="Add Todo Description..."
-                        autoFocus={true}
-                        onFocus={this.handleInputFocus}
-                        onBlur={this.handleChangeTaskTitle}
-                    />
-                </div>
+                <TaskForm
+                    title={this.props.title}
+                    handleChangeTaskTitle={this.handleChangeTaskTitle}
+                />
             );
         } else {
             const actions = !this.props.actions ? "" : this.props.actions.map((action) => {
@@ -485,6 +476,50 @@ class EditableTask extends React.Component {
             );
         }
     };
+}
+
+class TaskForm extends React.Component {
+    state = {
+        fields: {
+            title: this.props.title
+
+        },
+        errors: {}
+    };
+
+    handleInputFocus = (e) => {
+        e.target.value = this.state.fields.title || "";
+    };
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.handleChangeTaskTitle(this.state.fields.title);
+    };
+
+    handleInputChange = (e) => {
+        this.setState({
+            fields: {
+                title: e.target.value
+            }
+        });
+    };
+
+    render() {
+        return (
+            <form className="ui input fluid large focus"
+                  onSubmit={this.handleSubmit}
+            >
+                <input
+                    name="title"
+                    placeholder="Add Todo Description..."
+                    autoFocus={true}
+                    onFocus={this.handleInputFocus}
+                    onChange={this.handleInputChange}
+                    onBlur={this.handleSubmit}
+                />
+            </form>
+        );
+    }
 }
 
 class TaskAction extends React.Component {
