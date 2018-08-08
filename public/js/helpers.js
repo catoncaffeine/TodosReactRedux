@@ -1,5 +1,5 @@
 window.helpers = (function () {
-  const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "WhyAreYouWorkingDay", "SadTomorrowIsMondayDay"];
+  const weekdays = ["SadTomorrowIsMondayDay", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "WhyAreYouWorkingDay"];
   function findById(array, id, cb) {
     array.forEach((el) => {
       if (el.id === id) {
