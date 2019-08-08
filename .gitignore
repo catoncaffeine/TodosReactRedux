@@ -1,0 +1,7 @@
+# IntelliJ and File Syste
+.idea
+.DS_Store
+*/.DS_Store
+
+# Node Modules
+node_modules/*
