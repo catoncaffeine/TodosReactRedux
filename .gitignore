@@ -1,3 +1,9 @@
+# IntelliJ and File Syste
 .idea
-/node_modules
+.DS_Store
+*/.DS_Store
+
+# Node Modules
+node_modules/*
+
 npm-debug.log

@@ -1,33 +1,26 @@
 {
     "todoList": [
         {
-            "title": "create more unit tests",
-            "id": "5665c1ef-b4fd-48e4-84b4-ccc49ac6948b",
-            "status": "todo",
-            "createdOn": 1504821006936,
-            "completedOn": null
-        },
-        {
             "title": "create an from with multiple async fields",
             "id": "b618ccc5-43df-42be-8edf-f04015bb7589",
             "status": "todo",
             "createdOn": 1504900466059,
             "completedOn": null
-        }
-    ],
-    "completedList": [
+        },
         {
             "id": "65142ba9-a4bc-4c93-a3f5-8a95156c754c",
             "title": "create a basic CRUD web app",
             "createdOn": 1504822603484,
-            "completedOn": 1533694441932,
-            "status": "completed"
-        },
+            "completedOn": null,
+            "status": "todo"
+        }
+    ],
+    "completedList": [
         {
-            "id": "ccbfcf5e-2f72-4d43-b9d2-827c4027511e",
-            "title": "display tasks in list based on their status",
-            "createdOn": 1533694444541,
-            "completedOn": 1533694482308,
+            "id": "5665c1ef-b4fd-48e4-84b4-ccc49ac6948b",
+            "title": "create more unit tests",
+            "createdOn": 1504821006936,
+            "completedOn": 1565293744716,
             "status": "completed"
         }
     ],
@@ -37,6 +30,13 @@
             "title": "Archived task",
             "createdOn": 1504822615546,
             "completedOn": 1504822624707,
+            "status": "archived"
+        },
+        {
+            "id": "ccbfcf5e-2f72-4d43-b9d2-827c4027511e",
+            "title": "display tasks in list based on their status",
+            "createdOn": 1533694444541,
+            "completedOn": 1533694482308,
             "status": "archived"
         }
     ],
