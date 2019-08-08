@@ -1,4 +1,4 @@
- class TaskFormField extends React.Component {
+class TaskFormField extends React.Component {
     handleInputFocus = (e) => {
         e.target.value = this.props.value || "";
     };
